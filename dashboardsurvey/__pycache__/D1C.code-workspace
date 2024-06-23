@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../Documentos/Repositorio GitHub/D1C"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../assets"
+		},
+		{
+			"path": "../data"
+		},
+		{
+			"path": "../pages"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "D1C"
+	}
+}
