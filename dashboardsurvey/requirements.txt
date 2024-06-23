@@ -7,3 +7,4 @@ dash
 dash_labs 
 dash_bootstrap_components 
 shapely
+dash_daq
