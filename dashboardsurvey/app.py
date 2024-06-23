@@ -8,6 +8,36 @@ from dash_labs.plugins.pages import register_page
 
 from callbacks import register_callbacks
 
+# Dash instance declaration
+app = dash.Dash(
+    __name__, plugins=[dl.plugins.pages], external_stylesheets=[
+        dbc.themes.BOOTSTRAP], update_title='Cargando...'
+)
+app.config.suppress_callback_exceptions = True
+
+# Accede al servidor Flask subyacente
+server = app.server
+
+# Utiliza el decorador before_first_request del servidor Flask
+@server.before_first_request
+def before_first_request():
+    # Aquí tu código que quieres ejecutar antes de la primera solicitud
+    print("Esta función se ejecuta antes de la primera solicitud")
+
+register_page("report", path_template="/report/<report_id>",
+                   layout=layout_report)
+# Top menu, items get from all pages registered with plugin.pages
+navbar = dbc.NavbarSimple([
+
+    dbc.NavItem(dbc.NavLink("Home", href="/")),
+    # Continuación de la configuración de tu navbar...
+],
+    brand="Survey results",
+    color="primary",
+    dark=True,
+    className="mb-2",
+)
+
 
 
 def layout_report(report_id=None, **kwargs):
