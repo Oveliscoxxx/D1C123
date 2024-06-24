@@ -24,8 +24,7 @@ def before_first_request():
     # Aquí tu código que quieres ejecutar antes de la primera solicitud
     print("Esta función se ejecuta antes de la primera solicitud")
 
-register_page("report", path_template="/report/<report_id>",
-                   layout=layout_report)
+
 # Top menu, items get from all pages registered with plugin.pages
 navbar = dbc.NavbarSimple([
 
