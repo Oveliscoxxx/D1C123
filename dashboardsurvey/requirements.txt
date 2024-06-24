@@ -1,3 +1,4 @@
+Flask==2.3.0
 gunicorn
 textblob
 fastapi
@@ -7,5 +8,4 @@ dash_labs
 dash_bootstrap_components 
 shapely
 dash_daq
-Flask==2.3.0
 werkzeug==2.2.2
