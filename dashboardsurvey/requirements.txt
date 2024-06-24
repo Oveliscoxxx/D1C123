@@ -8,4 +8,4 @@ dash_labs
 dash_bootstrap_components 
 shapely
 dash_daq
-werkzeug 
+Werkzeug==2.2.2
